@@ -36,7 +36,7 @@ The Above Code will do the following activities
 2. Install `pandas` as it is required for the execution of Solution.py
 3. Copy the Solution.py in the Image
 4. Build the Docker Image
-5. Run the Image in the Container and output the result on Console
+5. Run the Image in the Container ,mount the directory provided by you to image and output the result on Console
 
 `Summary`
 
