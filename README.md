@@ -35,3 +35,7 @@ The Above Code will do the following activities
 3. Copy the Solution.py in the Image
 4. Build the Docker Image
 5. Run the Image in the Container and output the result on Console
+
+`Summary`
+It has a great set of Data to Analyse  user transactions.
+Please create another branch if you want to make contribution

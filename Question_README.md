@@ -1,26 +1,22 @@
-# DWH Coding Solution
+# DWH Coding Challenge
 
-## Thought Process
+## Resources
 
-All the Data Resembled database transaction logs, and Considering it was of 1 User.
-Since the Data was nested, unbalanced and missing data, I had to Normalise it , Balanced the data and either removed 
-Null values or filled it with sample values.
-Updated the df with updated records adn removed unwanted records(Data filtering)
+There are three tables, which are `accounts`, `cards`, and `saving_accounts`. <br>
+An account can have up to one concurrent active card and one concurrent active savings_account. <br>
+You are given the event logs of those tables in the respective directory name under `data` directory.
 
-Dropping the Columns that were not usefull,removing the rows which were not meeting certain criteria like balance < 0
+The event logs are of JSON format, and the fields definition are:
 
+| Field | Description |
+|:-----:|-------------|
+| id | ID of the DB record |
+| op | type of DB operation. 'c' means `create` and 'u' means `update` |
+| ts | timestamp when the event happened |
+| data | DB record field / value pairs. Only exists in event of type 'c' |
+| set | Updated DB record field / value pairs. Only exists in event of type 'u' |
 
-The Solution consist of following files:
-
-|   File_Name   | Description                                                                                    |
-|:-------------:|------------------------------------------------------------------------------------------------|
-|  Solution.py  | The Python File which has the logic implemented                                                |
-|  Dockerfile   | File which contains the information of building image and running python script ,along with dependencies |
-| Deployment.sh | Deployment Script to create the image and launch image in local container                              |
-
-## Execution Steps
-
-
+## Tasks
 
 To do the following tasks, you probably gonna need some kinds data processing library in your own choice of programming language.
 `pandas`, a data processing library in Python, is recommended due to ease of use and simplicity. However, you are free to choose
