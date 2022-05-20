@@ -10,7 +10,7 @@ base_location = "/usr/app/src/data/"
 
 #reading and Parsing/Normalizing acccount records
 accounts_location=base_location+'accounts/*.json'
-l=[]
+l = []
 for filename in glob.glob(accounts_location):
     with open(filename) as data_file:
         data = json.load(data_file)
@@ -20,10 +20,10 @@ for filename in glob.glob(accounts_location):
 account_df = pd.concat(l, axis=0) 
 account_df.reset_index(drop=True, inplace=True)
 
-#sorting the values to see in which form records was infused
+# sorting the values to see in which form records was infused
 adf = account_df.sort_values('ts')
 
-#visualizing the Data
+# visualizing the Data
 print("Normalized Account DF \n",adf)
 
 

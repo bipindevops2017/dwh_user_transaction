@@ -20,6 +20,8 @@ The Solution consist of following files:
 
 ## Execution Steps
 
+### Requirements
+Install Doker machine on your system
 ### Execute the following commands in local directory
 ```
 
